@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 ActiveRecord::Base.transaction do
+    Cat.delete_all
 
-cat1 = Cat.create(name: 'Whiskers', birth_date: '2020/01/03', color: 'Gold', sex: 'M')
+cat1 = Cat.create(id: 1, name: 'Whiskers', birth_date: '2020/01/03', color: 'Gold', sex: 'M')
+cat2 = Cat.create(id: 2, name: 'Sennnacy', birth_date: '2020/01/03', color: 'Gold', sex: 'M')
 
 
 end
